@@ -15,7 +15,7 @@ namespace Models{
         [Required]
         public string DatadeNascimento{get; set;}
         [Required]
-        public string ServiçosPrestados{get; set;}
+        public string ServicosPrestados{get; set;}
         [Required]
         public string CEP{get; set;}
         [Required]
@@ -24,11 +24,11 @@ namespace Models{
         public AutonomoModels(){
 
         }
-        public AutonomoModels(string nome, string cpf, string datadenascimento, string serviçosprestados, string cep, string email){
+        public AutonomoModels(string nome, string cpf, string datadenascimento, string servicosprestados, string cep, string email){
             Nome = nome;
             CPF = cpf;
             DatadeNascimento = datadenascimento;
-            ServiçosPrestados = serviçosprestados;
+            ServicosPrestados = servicosprestados;
             CEP = cep;
             Email = email;
         }
@@ -40,7 +40,7 @@ namespace Models{
                    $"\n Nome: {Nome} "+
                    $"\n CPF: {CPF}"+
                    $"\n Data de Nascimento:{DatadeNascimento}"+
-                   $"\n Serviços Prestados: {ServiçosPrestados}"+
+                   $"\n Serviços Prestados: {ServicosPrestados}"+
                    $"\n Cep: {CEP}"+
                    $"\n Email: {Email}";
         }
