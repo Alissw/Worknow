@@ -33,6 +33,20 @@ namespace Models{
             Email = email;
         }
 
+        /*
+        public static List<AutonomoModels> GetAutonomo(){
+            var db = new Context();
+            return db.Autonomos.ToList();
+        }
+
+        public static AutonomoModels GetAutonomo(int autonomoId){
+            var db = new context();
+            return(from autonomo in db.Autonomos
+                where autonomo.AutonomoId == autonomoId
+                select autonomo).ToFirst();
+        }
+        */
+
 
         public override string ToString(){
             return $"--------- Dados Do Cliente Autonomo-------"+
