@@ -20,6 +20,14 @@ namespace Controller
             }
             new AutonomoModels(nome, cpf, datadenascimento, servicosprestados, cep, email);
         }
+
+        public static void Atualizar(int AutonomoId, string nome, string cpf, string datadenascimento, string servicosprestados, string cep, string email){
+            AutonomoModels.Atualizar(AutonomoId, nome, cpf, datadenascimento, servicosprestados, cep, email);
+        }
+       public static void Deletar(int id)
+        {
+            AutonomoModels.Deletar(id);
+        }        
         
         public static AutonomoModels GetAutonomo(int autonomoId){
             return AutonomoModels.GetAutonomo(autonomoId);

@@ -50,7 +50,7 @@ namespace Models{
                 where autonomo.AutonomoId == autonomoId
                 select autonomo).First();
         }
-        public static void Update(int AutonomoId, string nome, string cpf, string datadenascimento, string servicosprestados, string cep, string email)
+        public static void Atualizar(int AutonomoId, string nome, string cpf, string datadenascimento, string servicosprestados, string cep, string email)
         {
             Context db = new Context();
             AutonomoModels autonomo = GetAutonomo(AutonomoId);
@@ -63,7 +63,7 @@ namespace Models{
             db.SaveChanges();
         }
 
-       public static void Delete(int id)
+       public static void Deletar(int id)
         {
             Context db = new Context();
             AutonomoModels autonomo = db.Autonomos.First(Autonomo => Autonomo.AutonomoId == id);
