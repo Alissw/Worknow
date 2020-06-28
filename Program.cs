@@ -14,6 +14,8 @@ namespace Worknow
             Console.WriteLine("Sistema Worknow");
             do{
                 Console.WriteLine("1 - Cadastrar autônomo");
+                Console.WriteLine("2 - Atualizar autônomo");
+                Console.WriteLine("3 - Deletar autônomo");
                 Console.WriteLine("0 - Sair");
                 opc = Convert.ToInt32(Console.ReadLine());
             
@@ -21,6 +23,12 @@ namespace Worknow
                 {
                     case 1:
                         AutonomoView.CadastrarAutonomo();
+                    break;
+                    case 2:
+                    
+                    break;
+                    case 3:
+                     
                     break;
 
                     default:
