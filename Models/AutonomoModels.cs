@@ -68,6 +68,15 @@ namespace Models{
             Context db = new Context();
             AutonomoModels autonomo = db.Autonomos.First(Autonomo => Autonomo.AutonomoId == id);
             db.Remove(autonomo);
+            
+            try
+            {
+                db.SaveChanges();
+            }
+            catch
+            {
+                Console.WriteLine("Falha au remover dados!\nTente novamente...");
+            }
         }        
 
 

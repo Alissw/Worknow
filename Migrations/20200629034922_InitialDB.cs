@@ -8,7 +8,7 @@ namespace Worknow.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "autonomoModels",
+                name: "Autonomos",
                 columns: table => new
                 {
                     AutonomoId = table.Column<int>(nullable: false)
@@ -22,14 +22,35 @@ namespace Worknow.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_autonomoModels", x => x.AutonomoId);
+                    table.PrimaryKey("PK_Autonomos", x => x.AutonomoId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Empreendedores",
+                columns: table => new
+                {
+                    MeiId = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    RazaoSocial = table.Column<string>(nullable: false),
+                    NomeFantasia = table.Column<string>(nullable: false),
+                    Cnpj = table.Column<string>(nullable: false),
+                    Cep = table.Column<string>(nullable: false),
+                    NumeroEmpregados = table.Column<int>(nullable: false),
+                    ServiçosPrestados = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Empreendedores", x => x.MeiId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "autonomoModels");
+                name: "Autonomos");
+
+            migrationBuilder.DropTable(
+                name: "Empreendedores");
         }
     }
 }

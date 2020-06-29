@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\github\\Worknow\\Worknow.csproj",
         "projectName": "Worknow",
         "projectPath": "C:\\github\\Worknow\\Worknow.csproj",
-        "packagesPath": "C:\\Users\\aliss\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Alisson\\.nuget\\packages\\",
         "outputPath": "C:\\github\\Worknow\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\aliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alisson\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

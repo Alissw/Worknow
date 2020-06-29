@@ -63,8 +63,15 @@ namespace Models{
        public static void Deletar(int id)
         {
             Context db = new Context();
-        EmpreendedorMEIModels eMei = db.Empreendedores.First( eMei => eMei.MeiId == id);
+            EmpreendedorMEIModels eMei = db.Empreendedores.First( eMei => eMei.MeiId == id);
             db.Remove(eMei);
+
+            try
+            {
+                db.SaveChanges();
+            }catch{
+                Console.WriteLine("Falha ao remover dados!\nTente novamente...");
+            }
         } 
 
 

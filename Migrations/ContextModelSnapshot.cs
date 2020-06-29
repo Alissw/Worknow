@@ -48,7 +48,41 @@ namespace Worknow.Migrations
 
                     b.HasKey("AutonomoId");
 
-                    b.ToTable("autonomoModels");
+                    b.ToTable("Autonomos");
+                });
+
+            modelBuilder.Entity("Models.EmpreendedorMEIModels", b =>
+                {
+                    b.Property<int>("MeiId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Cnpj")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("NomeFantasia")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("NumeroEmpregados")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RazaoSocial")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("ServiçosPrestados")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("MeiId");
+
+                    b.ToTable("Empreendedores");
                 });
 #pragma warning restore 612, 618
         }
