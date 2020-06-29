@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
+using System.Linq;
+using Repositories;
 
 namespace Models{
     public class AutonomoModels{
@@ -31,21 +32,52 @@ namespace Models{
             ServicosPrestados = servicosprestados;
             CEP = cep;
             Email = email;
+
+            var db = new Context();
+            db.Autonomos.Add(this);
+            db.SaveChanges();
         }
 
-        /*
+        
         public static List<AutonomoModels> GetAutonomo(){
             var db = new Context();
             return db.Autonomos.ToList();
         }
 
         public static AutonomoModels GetAutonomo(int autonomoId){
-            var db = new context();
+            var db = new Context();
             return(from autonomo in db.Autonomos
                 where autonomo.AutonomoId == autonomoId
-                select autonomo).ToFirst();
+                select autonomo).First();
         }
-        */
+        public static void Atualizar(int AutonomoId, string nome, string cpf, string datadenascimento, string servicosprestados, string cep, string email)
+        {
+            Context db = new Context();
+            AutonomoModels autonomo = GetAutonomo(AutonomoId);
+            autonomo.Nome = nome;
+            autonomo.CPF = cpf;
+            autonomo.DatadeNascimento = datadenascimento;
+            autonomo.ServicosPrestados = servicosprestados;
+            autonomo.CEP = cep;
+            autonomo.Email = email;
+            db.SaveChanges();
+        }
+
+       public static void Deletar(int id)
+        {
+            Context db = new Context();
+            AutonomoModels autonomo = db.Autonomos.First(Autonomo => Autonomo.AutonomoId == id);
+            db.Remove(autonomo);
+            
+            try
+            {
+                db.SaveChanges();
+            }
+            catch
+            {
+                Console.WriteLine("Falha au remover dados!\nTente novamente...");
+            }
+        }        
 
 
         public override string ToString(){
