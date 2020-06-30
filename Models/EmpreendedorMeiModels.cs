@@ -33,6 +33,10 @@ namespace Models{
             Cep = cep;
             NumeroEmpregados = numeroempregados;
             ServiçosPrestados = serviçosprestados;
+
+            var db = new Context();
+            db.Empreendedores.Add(this);
+            db.SaveChanges();
         }
 
         public static List<EmpreendedorMEIModels> GetEMei(){
@@ -46,18 +50,32 @@ namespace Models{
                 where eMei.MeiId == MeiId
                 select eMei).First();
         }
-        public static void Atualizar(int MeiId, string razaosocial, string nomefantasia, string cnpj, string cep, int numeroempregados, string serviçosprestados)
+        public static void Atualizar(
+            int MeiId, 
+            string razaosocial, 
+            string nomefantasia, 
+            string cnpj, 
+            string cep, 
+            int numeroempregados, 
+            string serviçosprestados
+            )
         {
             Context db = new Context();
-            EmpreendedorMEIModels eMei = GetEMei(MeiId);
-            eMei.RazaoSocial = razaosocial;
-            eMei.NomeFantasia = nomefantasia;
-            eMei.Cnpj = cnpj;
-            eMei.Cep = cep;
-            eMei.NumeroEmpregados = numeroempregados;
-            eMei.ServiçosPrestados = serviçosprestados;
-            
-            db.SaveChanges();
+            try
+            {
+                EmpreendedorMEIModels empreendedor = db.Empreendedores.First(empreendedor => empreendedor.MeiId == MeiId);
+                empreendedor.RazaoSocial = razaosocial;
+                empreendedor.NomeFantasia = nomefantasia;
+                empreendedor.Cnpj = cnpj;
+                empreendedor.Cep = cep;
+                empreendedor.NumeroEmpregados = numeroempregados;
+                empreendedor.ServiçosPrestados = serviçosprestados;
+                db.SaveChanges();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
         }
 
        public static void Deletar(int id)

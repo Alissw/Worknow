@@ -17,7 +17,7 @@ namespace Views{
             Console.WriteLine("CEP: ");
             string servicosprestados = Console.ReadLine();
             Console.WriteLine("Número de Empregados: ");
-            int numeroempregados = Console.Read();
+            int numeroempregados = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Serviços prestados: ");
             string serviçosprestados = Console.ReadLine();
             EmpreendedorMeiController.InserirEmpreendedor(razaosocial,nomefantasia,cnpj,servicosprestados,numeroempregados,servicosprestados);
