@@ -30,11 +30,31 @@ namespace Interfaces
                         txtSenha.Text,
                         txtConfirmaSenha.Text
                     );
+
+                    MessageBox.Show(
+                        "Dados cadastrados com sucesso!",
+                        "Cadastro concluído!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    this.Close();
                 }
                 catch
                 {
-                    
+                    MessageBox.Show(
+                        "Falha ao realizar cadastro no banco de dados!",
+                        "Erro!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                 }
+            }else{
+                MessageBox.Show(
+                    "Preenchaa todos os campos!",
+                    "Alerta!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation
+                );
             }
 
         }
