@@ -6,12 +6,9 @@
 - Criado metodo update e delete na classe EmpreendedorModels
 - Configurado controllers do AutonomoModels
 - Configurrado controllers do EmpreendedorModels<br>
-**Resumo: O cadastro do AutonomoModels e EmpreendedorModels já está funcionando, porém foi criado uma iteração via console para testes das funcionalidades já implementadas**<br>
 
-## O que falta fazer?
-- Instegrar a interface e adaptar os métodos
-- Arrumar o método **Atualizar** que ainda não está funcionando
-- Revisão de todos os métodos
+## O que falta?
+- Integrar as interfaces que estamos desenvolvendo
 
 ## Comando banco de dados
 1. dotnet tool install dotnet-ef -g --version 3.1.1
