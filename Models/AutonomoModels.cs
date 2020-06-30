@@ -50,17 +50,33 @@ namespace Models{
                 where autonomo.AutonomoId == autonomoId
                 select autonomo).First();
         }
-        public static void Atualizar(int AutonomoId, string nome, string cpf, string datadenascimento, string servicosprestados, string cep, string email)
+        public static void Atualizar(
+            int AutonomoId, 
+            string nome, 
+            string cpf, 
+            string datadenascimento, 
+            string servicosprestados, 
+            string cep, 
+            string email
+            )
         {
             Context db = new Context();
-            AutonomoModels autonomo = GetAutonomo(AutonomoId);
-            autonomo.Nome = nome;
-            autonomo.CPF = cpf;
-            autonomo.DatadeNascimento = datadenascimento;
-            autonomo.ServicosPrestados = servicosprestados;
-            autonomo.CEP = cep;
-            autonomo.Email = email;
-            db.SaveChanges();
+            try
+            {
+                AutonomoModels autonomo = db.Autonomos.First(autonomo => autonomo.AutonomoId == AutonomoId);
+                autonomo.AutonomoId = AutonomoId;
+                autonomo.Nome = nome;
+                autonomo.CPF = cpf;
+                autonomo.DatadeNascimento = datadenascimento;
+                autonomo.ServicosPrestados = servicosprestados;
+                autonomo.CEP = cep;
+                autonomo.Email = email;
+                db.SaveChanges();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
         }
 
        public static void Deletar(int id)
