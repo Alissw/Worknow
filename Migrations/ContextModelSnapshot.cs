@@ -65,18 +65,19 @@ namespace Worknow.Migrations
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("NomeFantasia")
+                    b.Property<string>("ConfirmarSenha")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int>("NumeroEmpregados")
-                        .HasColumnType("int");
+                    b.Property<string>("NomeFantasia")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("RazaoSocial")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("ServiçosPrestados")
+                    b.Property<string>("Senha")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 

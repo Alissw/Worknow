@@ -6,13 +6,13 @@ namespace Controller
 {
     public class EmpreendedorMeiController
     {
-        public static void InserirEmpreendedor(string razaosocial, string nomefantasia, string cnpj, string cep, int numeroempregados, string serviçosprestados)
+        public static void InserirEmpreendedor(string razaosocial, string nomefantasia, string cnpj, string cep, string senha, string confirmarSenha)
         {
-            new EmpreendedorMEIModels(razaosocial, nomefantasia, cnpj, cep, numeroempregados, serviçosprestados);
+            new EmpreendedorMEIModels(razaosocial, nomefantasia, cnpj, cep, senha, confirmarSenha);
         }
 
-        public static void Atualizar(int MeiId, string razaosocial, string nomefantasia, string cnpj, string cep, int numeroempregados, string serviçosprestados){
-            EmpreendedorMEIModels.Atualizar(MeiId, razaosocial, nomefantasia, cnpj, cep, numeroempregados, serviçosprestados);
+        public static void Atualizar(int MeiId, string razaosocial, string nomefantasia, string cnpj, string cep, string senha, string confirmarSenha){
+            EmpreendedorMEIModels.Atualizar(MeiId, razaosocial, nomefantasia, cnpj, cep, senha, confirmarSenha);
         }
        public static void Deletar(int id)
         {

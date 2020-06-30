@@ -8,7 +8,7 @@ using Repositories;
 namespace Worknow.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200629034922_InitialDB")]
+    [Migration("20200630050240_InitialDB")]
     partial class InitialDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,18 +67,19 @@ namespace Worknow.Migrations
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("NomeFantasia")
+                    b.Property<string>("ConfirmarSenha")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int>("NumeroEmpregados")
-                        .HasColumnType("int");
+                    b.Property<string>("NomeFantasia")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("RazaoSocial")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("ServiçosPrestados")
+                    b.Property<string>("Senha")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 

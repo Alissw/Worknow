@@ -19,20 +19,20 @@ namespace Models{
         [Required]
         public string Cep {get; set; }
         [Required]
-        public int NumeroEmpregados {get; set; }
+        public string Senha {get; set; }
         [Required]
-        public string ServiçosPrestados{get; set;}
+        public string ConfirmarSenha{get; set;}
 
         public EmpreendedorMEIModels(){
 
         }
-        public EmpreendedorMEIModels(string razaosocial, string nomefantasia, string cnpj, string cep, int numeroempregados, string serviçosprestados){
+        public EmpreendedorMEIModels(string razaosocial, string nomefantasia, string cnpj, string cep, string senha, string confirmarSenha){
             RazaoSocial = razaosocial;
             NomeFantasia = nomefantasia;
             Cnpj = cnpj;
             Cep = cep;
-            NumeroEmpregados = numeroempregados;
-            ServiçosPrestados = serviçosprestados;
+            Senha = senha;
+            ConfirmarSenha = confirmarSenha;
 
             var db = new Context();
             db.Empreendedores.Add(this);
@@ -56,8 +56,8 @@ namespace Models{
             string nomefantasia, 
             string cnpj, 
             string cep, 
-            int numeroempregados, 
-            string serviçosprestados
+            string senha, 
+            string confirmarSenha
             )
         {
             Context db = new Context();
@@ -68,8 +68,8 @@ namespace Models{
                 empreendedor.NomeFantasia = nomefantasia;
                 empreendedor.Cnpj = cnpj;
                 empreendedor.Cep = cep;
-                empreendedor.NumeroEmpregados = numeroempregados;
-                empreendedor.ServiçosPrestados = serviçosprestados;
+                empreendedor.Senha = senha;
+                empreendedor.ConfirmarSenha = confirmarSenha;
                 db.SaveChanges();
             }
             catch
@@ -98,9 +98,7 @@ namespace Models{
                    $"\n ID: {MeiId}"+
                    $"\n Razão Social: {RazaoSocial} "+
                    $"\n CNPJ: {Cnpj}"+
-                   $"\n CNPJ: {Cep}"+
-                   $"\n Número de Empregados:{NumeroEmpregados}"+
-                   $"\n Serviços Prestados: {ServiçosPrestados}";
+                   $"\n CNPJ: {Cep}";
         }
     }
 }

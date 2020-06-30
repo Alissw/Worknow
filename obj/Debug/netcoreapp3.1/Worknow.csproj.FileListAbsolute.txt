@@ -1,4 +1,3 @@
-C:\github\Worknow\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\github\Worknow\bin\Debug\netcoreapp3.1\Worknow.exe
 C:\github\Worknow\bin\Debug\netcoreapp3.1\Worknow.deps.json
 C:\github\Worknow\bin\Debug\netcoreapp3.1\Worknow.runtimeconfig.json
@@ -16,13 +15,9 @@ C:\github\Worknow\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
 C:\github\Worknow\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
 C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.csprojAssemblyReference.cache
 C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.csproj.CoreCompileInputs.cache
-C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.MvcApplicationPartsAssemblyInfo.cache
 C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.AssemblyInfoInputs.cache
 C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.AssemblyInfo.cs
-C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.RazorTargetAssemblyInfo.cache
 C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.csproj.CopyComplete
-C:\github\Worknow\obj\Debug\netcoreapp3.1\staticwebassets\Worknow.StaticWebAssets.Manifest.cache
-C:\github\Worknow\obj\Debug\netcoreapp3.1\staticwebassets\Worknow.StaticWebAssets.xml
 C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.dll
 C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.pdb
 C:\github\Worknow\obj\Debug\netcoreapp3.1\Worknow.genruntimeconfig.cache
@@ -39,18 +34,4 @@ C:\github\Worknow\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\github\Worknow\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\github\Worknow\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\github\Worknow\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
-C:\github\Worknow\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\github\Worknow\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
