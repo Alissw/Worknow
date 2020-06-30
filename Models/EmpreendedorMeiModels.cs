@@ -33,6 +33,10 @@ namespace Models{
             Cep = cep;
             NumeroEmpregados = numeroempregados;
             ServiçosPrestados = serviçosprestados;
+
+            var db = new Context();
+            db.Empreendedores.Add(this);
+            db.SaveChanges();
         }
 
         public static List<EmpreendedorMEIModels> GetEMei(){
