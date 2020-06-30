@@ -50,7 +50,7 @@ namespace Interfaces
                 }
             }else{
                 MessageBox.Show(
-                    "Preenchaa todos os campos!",
+                    "Preencha todos os campos!",
                     "Alerta!",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation
@@ -63,5 +63,17 @@ namespace Interfaces
             this.Close();
         }
 
+        
+        //Desabilita o botão fechar do formulário
+        private const int WS_SYSMENU = 0x80000;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.Style &= ~WS_SYSMENU;
+                return cp;
+            }
+        }
     }
 }

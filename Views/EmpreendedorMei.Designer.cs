@@ -112,6 +112,7 @@ namespace Interfaces
             this.txtSenha = new TextBox();
             this.txtSenha.Location = new Point(20, 325);
             this.txtSenha.Size = new Size(100,20);
+            this.txtSenha.PasswordChar = '*';
             this.Controls.Add(txtSenha);
 
             this.lbConfirmaSenha = new Label();
@@ -123,6 +124,7 @@ namespace Interfaces
             this.txtConfirmaSenha = new TextBox();
             this.txtConfirmaSenha.Location = new Point(20, 385);
             this.txtConfirmaSenha.Size = new Size(100, 165);
+            this.txtConfirmaSenha.PasswordChar = '*';
             this.Controls.Add(txtConfirmaSenha);
 
             btConfirma = new Button();

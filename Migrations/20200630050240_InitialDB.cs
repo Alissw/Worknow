@@ -35,8 +35,8 @@ namespace Worknow.Migrations
                     NomeFantasia = table.Column<string>(nullable: false),
                     Cnpj = table.Column<string>(nullable: false),
                     Cep = table.Column<string>(nullable: false),
-                    NumeroEmpregados = table.Column<int>(nullable: false),
-                    ServiçosPrestados = table.Column<string>(nullable: false)
+                    Senha = table.Column<string>(nullable: false),
+                    ConfirmarSenha = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
