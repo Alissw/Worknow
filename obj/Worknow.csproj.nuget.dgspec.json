@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\github\\Worknow\\Worknow.csproj",
         "projectName": "Worknow",
         "projectPath": "C:\\github\\Worknow\\Worknow.csproj",
-        "packagesPath": "C:\\Users\\Alisson\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\aliss\\.nuget\\packages\\",
         "outputPath": "C:\\github\\Worknow\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Alisson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aliss\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -42,17 +42,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.5, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.5, )"
             },
@@ -72,11 +64,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"

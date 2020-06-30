@@ -1,85 +1,119 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using Views;
+using System.Windows.Forms;
 
-namespace Worknow
+namespace Interfaces
 {
-    public class Program
+    static class Program
     {
-        public static void Main(string[] args)
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            int opc = 0;
-            Console.WriteLine("Sistema Worknow");
-            do{
-                Console.WriteLine("1 - Autonomos");
-                Console.WriteLine("2 - Emprendedores");
-                Console.WriteLine("0 - Sair");
-                opc = Convert.ToInt32(Console.ReadLine());
-                Console.Clear();
-            
-                switch (opc)
-                {
-                    case 1:
-                        int opcAutonomo = 0;
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
+        }
+    }
+     public class Formulario : Form {
+          
+        Label lbCadastro;
+        Label lbLogin;
+        Button btnCadastraAutonomo;
+        Button btnCadastraMEI;
+        // Button btnEntrarMEI;
+        // Button btnEntrarAutonomo;
+        // Button btVoltar;
+        Button btSair;
 
-                        do{
-                            Console.WriteLine("#####Menu Autônomos#####");
-                            Console.WriteLine("1 - Cadastrar");
-                            Console.WriteLine("2 - Atualizar dados");
-                            Console.WriteLine("3 - Deletar dados");
-                            Console.WriteLine("0 - Sair");
-                            opcAutonomo = Convert.ToInt32(Console.ReadLine());
-                            Console.Clear();
-                            
-                            switch (opcAutonomo)
-                            {
-                                case 1:
-                                    AutonomoView.CadastrarAutonomo();
-                                break;
-                                case 2:
-                                    AutonomoView.Atualizar();
-                                break;
-                                case 3:
-                                    AutonomoView.Deletar();
-                                break;
+        public Formulario(){
 
-                            }
+            this.Text = "WorkNow";
+            this.Size = new Size(270, 370);
 
-                        }while (opcAutonomo != 0 );
-                    break;
-                    case 2:
-                        int opcEmpreendedor = 0;
+            lbCadastro = new Label();
+            lbCadastro.Text = "Ainda não possui conta?";
+            lbCadastro.Location = new Point(95,5);
+            this.Controls.Add(lbCadastro);
 
-                        do{
-                            Console.WriteLine("#####Menu Empreendedor#####");
-                            Console.WriteLine("1 - Cadastrar");
-                            Console.WriteLine("2 - Atualizar dados");
-                            Console.WriteLine("2 - Deletar dados");
-                            Console.WriteLine("0 - Sair");
-                            opcEmpreendedor = Convert.ToInt32(Console.ReadLine());
-                            Console.Clear();
-                            
-                            switch (opcEmpreendedor)
-                            {
-                                case 1:
-                                    EmpreendedorMeiView.CadastrarAutonomo();
-                                break;
+            // lbLogin = new Label();
+            // lbLogin.Text = "Já possui conta? Entre agora";
+            // lbLogin.Location = new Point(95,5);
+            // this.Controls.Add(lbLogin);
 
-                            }
+            btnCadastraAutonomo = new Button();
+            btnCadastraAutonomo.Text = "Autonômo";
+            btnCadastraAutonomo.Location = new Point(95, 45);
+            btnCadastraAutonomo.Size = new Size (100,20);
+            // btnCadastraAutonomo.Click += new EventHandler (btnCadastraAutonomoClick);
+            this.Controls.Add(btnCadastraAutonomo);
 
-                        }while (opcEmpreendedor != 0 );
-                    break;
+            btnCadastraMEI = new Button();
+            btnCadastraMEI.Text = "Autonomo MEI";
+            btnCadastraMEI.Location = new Point(95, 65);
+            btnCadastraMEI.Size = new Size (100,20);
+            // btnCadastraMEI.Click += new EventHandler (btnCadastraMEIClick);
+            this.Controls.Add(btnCadastraMEI);
 
-                    default:
-                        Console.WriteLine("Até mais");
-                    break;
-                }
-            }while(opc != 0 );
-            
+            // btnEntrarMEI = new Button();
+            // btnEntrarMEI.Text = "Entrar como Empreendedor MEI";
+            // btnEntrarMEI.Location = new Point(95, 45);
+            // btnEntrarMEI.Size = new Size (100,20);
+            // this.btnEntrarMEI.BackColor = ColorTranslator.FromHtml("#00c2cb");
+            // // btnEntrarMEI.Click += new EventHandler (btnEntrarMEIClick);
+            // this.Controls.Add(btnEntrarMEI);
+
+            // btnEntrarAutonomo = new Button();
+            // btnEntrarAutonomo.Text = "Entrar como Autonômo";
+            // btnEntrarAutonomo.Location = new Point(95, 45);
+            // btnEntrarAutonomo.Size = new Size (100,20);
+            // this.btnEntrarAutonomo.BackColor = ColorTranslator.FromHtml("#00c2cb");
+            // // btnEntrarAutonomo.Click += new EventHandler (btnEntrarAutonomoClick);
+            // this.Controls.Add(btnEntrarAutonomo);
+
+            // btVoltar = new Button();
+            // btVoltar.Text = "Voltar";
+            // btVoltar.Location = new Point(95, 84);
+            // btVoltar.Size = new Size (100,20);
+            // btVoltar.Click += new EventHandler (btVoltarClick);
+            // this.Controls.Add(btVoltar);
+
+            btSair = new Button();
+            btSair.Text = "Sair";
+            btSair.Location = new Point(130, 300);
+            btSair.Click += new EventHandler(btSairClick);
+            this.Controls.Add(btSair);
         }
 
+            // Botão para entrar como MEI
 
+            // private void btnEntrarMEIClick(object sender, EventArgs e)
+            // {
+            //     ListaFilme listaFilme = new ListaFilme(this);
+            //     listaFilme.Show();
+            //     this.Hide();
+            // }
+
+            //  Botão para entrar como Autonomo
+
+            // private void btnEntrarAutonomoClick(object sender, EventArgs e)
+            // {
+            //     ListaLocacao listaLocacao = new ListaLocacao(this);
+            //     listaLocacao.Show();
+            //     this.Hide();
+            // }
+            
+            private void btSairClick(object sender, EventArgs e)
+            {
+                this.Close();
+            }
     }
 }
