@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 using System.Drawing;
+using System;
 
 namespace Interfaces
 {
@@ -51,6 +52,10 @@ namespace Interfaces
             this.Text = "Cadastro Empreendedor MEI ";
             this.Size = new Size (300, 500);
             this.Font = new Font(this.Font, FontStyle.Bold);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.StartPosition = FormStartPosition.CenterScreen;            
 
             this.lbRazaoSocial = new Label();
             this.lbRazaoSocial.Text = "Razão Social";
@@ -124,14 +129,14 @@ namespace Interfaces
             btConfirma.Text = "Confirmar";
             btConfirma.Location = new Point(20, 420);
             this.btConfirma.BackColor = ColorTranslator.FromHtml("#00c2cb");
-            // btConfirma.Click += new EventHandler(btConfirmaClick);
+            btConfirma.Click += new EventHandler(this.btnConfirmar_Click);
             this.Controls.Add(btConfirma);
 
             btSair = new Button();
             btSair.Text = "Sair";
             btSair.Location = new Point(100, 420);
             this.btSair.BackColor = ColorTranslator.FromHtml("#00c2cb");
-            // btSair.Click += new EventHandler(btSairClick);
+            btSair.Click += new EventHandler(this.btnSair_Click);
             this.Controls.Add(btSair);
         }
 
