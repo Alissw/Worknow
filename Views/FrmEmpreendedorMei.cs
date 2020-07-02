@@ -37,7 +37,10 @@ namespace View
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
                     );
-                    this.Close();
+                    this.Hide();
+                    
+                    FrmMenu frmMenu = new FrmMenu();
+                    frmMenu.Show();
                 }
                 catch
                 {
