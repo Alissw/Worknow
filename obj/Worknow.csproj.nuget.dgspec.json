@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\github\\Worknow\\Worknow.csproj": {}
+    "C:\\GitHub\\Worknow\\Worknow.csproj": {}
   },
   "projects": {
-    "C:\\github\\Worknow\\Worknow.csproj": {
+    "C:\\GitHub\\Worknow\\Worknow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\github\\Worknow\\Worknow.csproj",
+        "projectUniqueName": "C:\\GitHub\\Worknow\\Worknow.csproj",
         "projectName": "Worknow",
-        "projectPath": "C:\\github\\Worknow\\Worknow.csproj",
+        "projectPath": "C:\\GitHub\\Worknow\\Worknow.csproj",
         "packagesPath": "C:\\Users\\aliss\\.nuget\\packages\\",
-        "outputPath": "C:\\github\\Worknow\\obj\\",
+        "outputPath": "C:\\GitHub\\Worknow\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

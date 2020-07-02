@@ -3,13 +3,10 @@ using System.Windows.Forms;
 using System.Drawing;
 using System;
 
-namespace Interfaces
+namespace View
 {
-    partial class Form1
+    partial class FrmEmpreendedor
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private IContainer components = null;
         private Label lbRazaoSocial;
         private TextBox txtRazaoSocial;
@@ -24,12 +21,8 @@ namespace Interfaces
         private Label lbConfirmaSenha;
         private TextBox txtConfirmaSenha;
         private Button btConfirma;
-        private Button btSair;
-
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        private Button btCancelar;
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -38,13 +31,6 @@ namespace Interfaces
             }
             base.Dispose(disposing);
         }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {   
             this.components = new Container();
@@ -130,19 +116,15 @@ namespace Interfaces
             btConfirma = new Button();
             btConfirma.Text = "Confirmar";
             btConfirma.Location = new Point(20, 420);
-            this.btConfirma.BackColor = ColorTranslator.FromHtml("#00c2cb");
             btConfirma.Click += new EventHandler(this.btnConfirmar_Click);
             this.Controls.Add(btConfirma);
 
-            btSair = new Button();
-            btSair.Text = "Sair";
-            btSair.Location = new Point(100, 420);
-            this.btSair.BackColor = ColorTranslator.FromHtml("#00c2cb");
-            btSair.Click += new EventHandler(this.btnSair_Click);
-            this.Controls.Add(btSair);
+            btCancelar = new Button();
+            btCancelar.Text = "Cancelar";
+            btCancelar.Location = new Point(100, 420);
+            btCancelar.Click += new EventHandler(this.btnCancelar_Click);
+            this.Controls.Add(btCancelar);
         }
-
-        #endregion
     }
 }
 

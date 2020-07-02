@@ -8,8 +8,8 @@
 - Configurado controllers do EmpreendedorModels<br>
 
 ## O está funcionando?
-1. Cadastro de autônomo via prompt **Desabilitado**
-2. Cadastro empreendedor mei **Com interface**
+1. Cadastro de autônomo
+2. Cadastro empreendedor mei 
 
 ## Comando banco de dados
 1. dotnet tool install dotnet-ef -g --version 3.1.1
@@ -20,3 +20,8 @@
 6. dotnet ef migrations add InitialDB
 7. dotnet ef database update
     - Para instalar o banco é só ligar o mysql no xampp e executar o comando no passo 7
+
+## Screenshots
+![Alt text](/Screenshot/Menu.png?raw=true "Menu")
+![Alt text](/Screenshot/Cadastro_Autonomo.png?raw=true "Cadastro Autônomo")
+![Alt text](/Screenshot/Cadastro_EmpMei.png?raw=true "Cadastro Emp. MEI")
