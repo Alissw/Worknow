@@ -22,6 +22,6 @@
     - Para instalar o banco é só ligar o mysql no xampp e executar o comando no passo 7
 
 ## Screenshots
-![Alt text](/Screenshot/Menu.png?raw=true "Menu")
-![Alt text](/Screenshot/Cadastro_Autonomo.png?raw=true "Cadastro Autônomo")
-![Alt text](/Screenshot/Cadastro_EmpMei.png?raw=true "Cadastro Emp. MEI")
+![Alt text](/Screenshot/Menu.PNG?raw=true "Menu")
+![Alt text](/Screenshot/Cadastro_Autonomo.PNG?raw=true "Cadastro Autônomo")
+![Alt text](/Screenshot/Cadastro_EmpMei.PNG?raw=true "Cadastro Emp. MEI")
