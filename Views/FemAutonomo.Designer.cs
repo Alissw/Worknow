@@ -54,11 +54,10 @@ namespace View
             this.StartPosition = FormStartPosition.CenterScreen;  
 
             //NOME
-            this.LbNomeAutonomo = new Label();
+            this.LbNomeAutonomo = new lib.Label();
             this.LbNomeAutonomo.Text = "Nome: ";
             this.LbNomeAutonomo.Location = new Point(10,10);
             this.LbNomeAutonomo.AutoSize = true;
-            this.Font = new Font(this.Font, FontStyle.Bold);
             this.Controls.Add(LbNomeAutonomo);
 
             this.tbNomeAutonomo = new TextBox();
@@ -68,11 +67,10 @@ namespace View
 
 
             //CPF
-            this.lbCPF = new Label();
+            this.lbCPF = new lib.Label();
             this.lbCPF.Text = "CPF: ";
             this.lbCPF.Location = new Point(10,55);
             this.lbCPF.AutoSize = true;
-            this.Font = new Font(this.Font, FontStyle.Bold);
             this.Controls.Add(lbCPF);
 
             this.mtbCPF = new MaskedTextBox();
@@ -83,11 +81,10 @@ namespace View
 
 
             //DATA DE NASCIMENTO
-            this.lbDataNascimento = new Label();
+            this.lbDataNascimento = new lib.Label();
             this.lbDataNascimento.Text = "Data de Nascimento: ";
             this.lbDataNascimento.Location = new Point(10,100);
             this.lbDataNascimento.AutoSize = true;
-            this.Font = new Font(this.Font, FontStyle.Bold);
             this.Controls.Add(lbDataNascimento);
 
             this.mtbDataNascimento = new MaskedTextBox();
@@ -98,11 +95,10 @@ namespace View
 
 
             //SERVIÇO PRESTADO
-            this.lbServicosPrestados = new Label();
+            this.lbServicosPrestados = new lib.Label();
             this.lbServicosPrestados.Text = "Serviços Prestados: ";
             this.lbServicosPrestados.Location = new Point(10,145);
             this.lbServicosPrestados.AutoSize = true;
-            this.Font = new Font(this.Font, FontStyle.Bold);
             this.Controls.Add(lbServicosPrestados);
 
             this.tbServicosPrestados = new TextBox();
@@ -112,11 +108,10 @@ namespace View
 
 
             //CEP
-            this.lbCEP = new Label();
+            this.lbCEP = new lib.Label();
             this.lbCEP.Text = "CEP: ";
             this.lbCEP.Location = new Point(10,190);
             this.lbCEP.AutoSize = true;
-            this.Font = new Font(this.Font, FontStyle.Bold);
             this.Controls.Add(lbCEP);
 
             this.mtbCEP = new MaskedTextBox();
@@ -127,11 +122,10 @@ namespace View
 
 
             //EMAIL
-            this.lbEmail = new Label();
+            this.lbEmail = new lib.Label();
             this.lbEmail.Text = "Email: ";
             this.lbEmail.Location = new Point(10,235);
             this.lbEmail.AutoSize = true;
-            this.Font = new Font(this.Font, FontStyle.Bold);
             this.Controls.Add(lbEmail);
 
             this.tbEmail = new TextBox();
@@ -140,17 +134,15 @@ namespace View
             this.Controls.Add(tbEmail);
 
 
-            this.btnConfirmar = new Button();
+            this.btnConfirmar = new lib.Button();
             this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.Size = new Size(80,30);
             this.btnConfirmar.Location = new Point(20,280);
             this.btnConfirmar.Click += new EventHandler(this.btnConfirmar_Click);
             this.Controls.Add(btnConfirmar);
 
-            this.btnCancelar = new Button();
+            this.btnCancelar = new lib.Button();
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Size = new Size(80,30);
-            this.btnCancelar.Location = new Point(130,280);
+            this.btnCancelar.Location = new Point(100,280);
             this.btnCancelar.Click += new EventHandler(this.btnCancelar_Click);
             this.Controls.Add(btnCancelar);
         }

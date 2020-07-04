@@ -113,13 +113,13 @@ namespace View
             this.txtConfirmaSenha.PasswordChar = '*';
             this.Controls.Add(txtConfirmaSenha);
 
-            btConfirma = new Button();
+            btConfirma = new lib.Button();
             btConfirma.Text = "Confirmar";
             btConfirma.Location = new Point(20, 420);
             btConfirma.Click += new EventHandler(this.btnConfirmar_Click);
             this.Controls.Add(btConfirma);
 
-            btCancelar = new Button();
+            btCancelar = new lib.Button();
             btCancelar.Text = "Cancelar";
             btCancelar.Location = new Point(100, 420);
             btCancelar.Click += new EventHandler(this.btnCancelar_Click);

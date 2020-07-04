@@ -1,11 +1,12 @@
 # Worknow
 
-## Alterações já feitas
+## Configurações do projeto
 - Configurado conexão com o banco
-- Criado metodo update e delete na classe AutonomoModesls
-- Criado metodo update e delete na classe EmpreendedorModels
+- Criado metodos insert, update e delete na classe AutonomoModesls
+- Criado metodos insert, update e delete na classe EmpreendedorModels
 - Configurado controllers do AutonomoModels
-- Configurado controllers do EmpreendedorModels<br>
+- Configurado controllers do EmpreendedorModels
+- Configurado lib dos componentes semelhantes<br>
 
 ## O está funcionando?
 1. Cadastro de autônomo
