@@ -8,7 +8,7 @@
 - Configurado controllers do EmpreendedorModels
 - Configurado lib dos componentes semelhantes<br>
 
-## O está funcionando?
+## O que está funcionando?
 1. Cadastro de autônomo
 2. Cadastro empreendedor mei 
 
