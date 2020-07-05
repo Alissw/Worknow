@@ -1,15 +1,16 @@
 # Worknow
 
-## Alterações já feitas
+## Configurações do projeto
 - Configurado conexão com o banco
-- Criado metodo update e delete na classe AutonomoModesls
-- Criado metodo update e delete na classe EmpreendedorModels
+- Criado metodos insert, update e delete na classe AutonomoModesls
+- Criado metodos insert, update e delete na classe EmpreendedorModels
 - Configurado controllers do AutonomoModels
-- Configurado controllers do EmpreendedorModels<br>
+- Configurado controllers do EmpreendedorModels
+- Configurado lib dos componentes semelhantes<br>
 
-## O está funcionando?
-1. Cadastro de autônomo via prompt **Desabilitado**
-2. Cadastro empreendedor mei **Com interface**
+## O que está funcionando?
+1. Cadastro de autônomo
+2. Cadastro empreendedor mei 
 
 ## Comando banco de dados
 1. dotnet tool install dotnet-ef -g --version 3.1.1
@@ -20,3 +21,8 @@
 6. dotnet ef migrations add InitialDB
 7. dotnet ef database update
     - Para instalar o banco é só ligar o mysql no xampp e executar o comando no passo 7
+
+## Screenshots
+![Alt text](/Screenshot/Menu.PNG?raw=true "Menu") <br>
+![Alt text](/Screenshot/Cadastro_Autonomo.PNG?raw=true "Cadastro Autônomo") <br>
+![Alt text](/Screenshot/Cadastro_EmpMei.PNG?raw=true "Cadastro Emp. MEI")

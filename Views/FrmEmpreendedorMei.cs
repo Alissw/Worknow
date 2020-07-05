@@ -2,11 +2,11 @@
 using System.Windows.Forms;
 using Controller;
 
-namespace Interfaces
+namespace View
 {
-    public partial class Form1 : Form
+    public partial class FrmEmpreendedor : Form
     {
-        public Form1()
+        public FrmEmpreendedor()
         {
             InitializeComponent();
         }
@@ -37,7 +37,10 @@ namespace Interfaces
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information
                     );
-                    this.Close();
+                    this.Hide();
+                    
+                    FrmMenu frmMenu = new FrmMenu();
+                    frmMenu.Show();
                 }
                 catch
                 {
@@ -59,8 +62,11 @@ namespace Interfaces
 
         }
 
-        public void btnSair_Click(object sender, EventArgs e){
-            this.Close();
+        public void btnCancelar_Click(object sender, EventArgs e){
+            this.Hide();
+            FrmMenu frmMenu = new FrmMenu();
+            frmMenu.Show();
+
         }
 
         

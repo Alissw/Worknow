@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ts+A8dOMjiq33UCU6+qitqm0vlBGEMVw3iJf9+rThQx60cg8/28Dt+irrSYGywPQ8HuJ5gdfSaISFa1/erP99g==",
+  "dgSpecHash": "/J0cAO9JWiSpqTqGWBvcAVNpKGcVtH/6wsjL9A1A17SMFYGkKkAALrbuK0NOJZUOZX2Q9dHQ57ZVVC2ZXEElOw==",
   "success": true,
-  "projectFilePath": "C:\\github\\Worknow\\Worknow.csproj",
+  "projectFilePath": "C:\\GitHub\\Worknow\\Worknow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aliss\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\aliss\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
