@@ -36,6 +36,25 @@ namespace Controller
         public static List<AutonomoModels> GetAutonomo(){
             return AutonomoModels.GetAutonomo();
         }
+        public static bool CamposPreenchidosCadastroAutonomo(
+            string nome,
+            string cpf,
+            string datadenascimento,
+            string servicosprestados,
+            string cep,
+            string email)
+        {
+            if ((nome == string.Empty)
+                || (cpf == string.Empty)
+                || (datadenascimento == string.Empty)
+                || (servicosprestados == string.Empty)
+                || (cep == string.Empty)
+                || (email == string.Empty))
+            {
+                return false;
+            }
+            return true;
+        }
 
     }
 }
