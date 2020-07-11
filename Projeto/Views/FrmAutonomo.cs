@@ -10,16 +10,11 @@ namespace View
         {
             InitializeComponent();
         }
-        public void btnConfirmar_Click(object sender, EventArgs e){
-            if(
-                tbNomeAutonomo.Text != "" &&
-                mtbCPF.Text != "" &&
-                mtbDataNascimento.Text != "" &&
-                tbServicosPrestados.Text != "" &&
-                mtbCEP.Text != "" &&
-                tbEmail.Text != ""
-            ){
-                try
+        public void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (AutonomoController.CamposPreenchidosCadastroAutonomo(tbNomeAutonomo.Text, mtbCPF.Text, mtbDataNascimento.Text, tbServicosPrestados.Text, mtbCEP.Text, tbEmail.Text))
                 {
                     AutonomoController.InserirAutonomo(
                         tbNomeAutonomo.Text,
@@ -37,38 +32,35 @@ namespace View
                         MessageBoxIcon.Information
                     );
                     this.Hide();
-                    
+
                     FrmMenu frmMenu = new FrmMenu();
                     frmMenu.Show();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show(
-                        "Falha ao realizar cadastro no banco de dados!",
-                        "Erro!",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error
-                    );
+                    MessageBox.Show("Preencha todos os campos!");
                 }
-            }else{
+            }
+            catch
+            {
                 MessageBox.Show(
-                    "Preencha todos os campos!",
-                    "Alerta!",
+                    "Falha ao realizar cadastro no banco de dados!",
+                    "Erro!",
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation
+                    MessageBoxIcon.Error
                 );
             }
-
         }
 
-        public void btnCancelar_Click(object sender, EventArgs e){
+        public void btnCancelar_Click(object sender, EventArgs e)
+        {
             this.Hide();
             FrmMenu frmMenu = new FrmMenu();
             frmMenu.Show();
 
         }
 
-        
+
         //Desabilita o botão fechar do formulário
         private const int WS_SYSMENU = 0x80000;
         protected override CreateParams CreateParams
